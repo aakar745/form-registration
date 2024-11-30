@@ -19,18 +19,17 @@ const connectDB = async () => {
             maxPoolSize: 10,
             serverSelectionTimeoutMS: 5000,
             socketTimeoutMS: 45000,
-            family: 4
+            authSource: 'admin'
         };
 
         // Connect to MongoDB
-        await mongoose.connect(process.env.MONGODB_URI, options);
-        
-        // Log successful connection
-        logger.info('MongoDB Connected Successfully');
-        
+        const conn = await mongoose.connect(process.env.MONGODB_URI, options);
+
+        logger.info(`MongoDB Connected: ${conn.connection.host}`);
+
         // Handle connection events
-        mongoose.connection.on('error', err => {
-            logger.error('MongoDB connection error:', err);
+        mongoose.connection.on('error', (err) => {
+            logger.error(`MongoDB connection error: ${err}`);
         });
 
         mongoose.connection.on('disconnected', () => {

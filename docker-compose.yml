@@ -6,7 +6,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MONGODB_URI=mongodb://mongodb:27017/formregistration
+      - MONGODB_URI=mongodb://form_user:form_password@mongodb:27017/formregistration?authSource=admin
       - PORT=5000
       - NODE_ENV=production
     depends_on:
@@ -25,8 +25,13 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=form_user
+      - MONGO_INITDB_ROOT_PASSWORD=form_password
+      - MONGO_INITDB_DATABASE=formregistration
     volumes:
       - mongodb_data:/data/db
+    restart: unless-stopped
 
 volumes:
   mongodb_data:

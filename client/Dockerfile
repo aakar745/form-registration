@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # Set environment variables for build
-ENV REACT_APP_API_URL=https://webapp-backend.ah1ajr.easypanel.host/api \
+ENV REACT_APP_API_URL=https://webapp-backend.ah1ajr.easypanel.host \
     NODE_ENV=production
 
 # Build the app

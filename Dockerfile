@@ -11,6 +11,11 @@ RUN npm install
 # Copy project files
 COPY . .
 
+# Set default environment variables
+ENV NODE_ENV=production \
+    PORT=5000 \
+    MONGODB_URI=mongodb://mongodb:27017/formregistration
+
 # Expose the port your app runs on
 EXPOSE 5000
 

@@ -41,6 +41,19 @@ app.get('/', (req, res) => {
     });
 });
 
+// API route - Same health check for /api
+app.get('/api', (req, res) => {
+    res.json({ 
+        status: 'ok',
+        message: 'API is running',
+        endpoints: {
+            auth: '/api/auth',
+            user: '/api/user',
+            forms: '/api/forms'
+        }
+    });
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);

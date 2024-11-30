@@ -3,7 +3,7 @@ import axios from 'axios';
 // Create axios instance with base URL
 const axiosInstance = axios.create({
   baseURL: process.env.NODE_ENV === 'production' 
-    ? '/api'  // In production, use relative path
+    ? 'https://webapp-backend.ah1ajr.easypanel.host'  // In production, use the full backend URL
     : process.env.REACT_APP_API_URL || 'http://localhost:5000', // In development, use localhost or env variable
   timeout: 5000,
   headers: {

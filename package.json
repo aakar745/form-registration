@@ -1,0 +1,25 @@
+{
+  "name": "form-registration",
+  "version": "1.0.0",
+  "description": "Form registration system with MongoDB",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.13.5",
+    "qrcode": "^1.5.4",
+    "speakeasy": "^2.0.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

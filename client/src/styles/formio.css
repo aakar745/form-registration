@@ -1,0 +1,218 @@
+/* Form.io Builder Styles */
+.formbuilder {
+  position: relative;
+  min-height: 200px;
+  background: #fff;
+}
+
+.builder-sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background: #f8f8f8;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.builder-sidebar_scroll {
+  padding: 10px;
+}
+
+.formcomponents {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.formcomponent {
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: move;
+  background: #fff;
+}
+
+.formcomponent:hover {
+  background: #f0f0f0;
+}
+
+.formarea {
+  margin-left: 200px;
+  padding: 20px;
+  min-height: 400px;
+}
+
+.formcomponent-placeholder {
+  border: 2px dashed #aaa;
+  background: #f8f8f8;
+  border-radius: 4px;
+  margin: 5px 0;
+  min-height: 50px;
+}
+
+/* Form Components */
+.formio-component {
+  margin-bottom: 15px;
+}
+
+.formio-component-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formio-component-textfield input,
+.formio-component-textarea textarea,
+.formio-component-email input,
+.formio-component-number input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.formio-component-select select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.formio-component-submit button {
+  padding: 8px 16px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formio-component-submit button:hover {
+  background: #1565c0;
+}
+
+/* Builder Dialog */
+.formio-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.formio-dialog-content {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Form Builder Drag & Drop */
+.builder-component {
+  cursor: move;
+  padding: 10px;
+  margin: 5px 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.builder-component:hover {
+  background: #f5f5f5;
+}
+
+.builder-component.drag-copy {
+  opacity: 0.5;
+}
+
+/* Component Settings Form */
+.component-settings-form {
+  padding: 15px;
+}
+
+.component-settings-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.component-settings-form input,
+.component-settings-form select,
+.component-settings-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Form Preview */
+.form-preview {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+/* Error States */
+.has-error .formio-component-label {
+  color: #d32f2f;
+}
+
+.has-error input,
+.has-error select,
+.has-error textarea {
+  border-color: #d32f2f;
+}
+
+.formio-error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+/* Success States */
+.has-success .formio-component-label {
+  color: #2e7d32;
+}
+
+.has-success input,
+.has-success select,
+.has-success textarea {
+  border-color: #2e7d32;
+}
+
+/* Loading States */
+.formio-loader {
+  position: relative;
+  min-height: 100px;
+}
+
+.formio-loader:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
